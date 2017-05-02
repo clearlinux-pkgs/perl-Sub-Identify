@@ -4,7 +4,7 @@
 #
 Name     : perl-Sub-Identify
 Version  : 0.14
-Release  : 4
+Release  : 5
 URL      : http://search.cpan.org/CPAN/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
 Summary  : 'Retrieve names of code references'
