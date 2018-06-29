@@ -4,14 +4,14 @@
 #
 Name     : perl-Sub-Identify
 Version  : 0.14
-Release  : 10
-URL      : https://www.cpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
-Source0  : https://www.cpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
+Release  : 11
+URL      : https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
 Summary  : 'Retrieve names of code references'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Sub-Identify-lib
-Requires: perl-Sub-Identify-doc
+Requires: perl-Sub-Identify-man
 
 %description
 # Sub::Identify
@@ -19,20 +19,20 @@ This perl module allows you to retrieve the real name of code references
 as well as their original package and location. See the module's POD
 documentation for examples.
 
-%package doc
-Summary: doc components for the perl-Sub-Identify package.
-Group: Documentation
-
-%description doc
-doc components for the perl-Sub-Identify package.
-
-
 %package lib
 Summary: lib components for the perl-Sub-Identify package.
 Group: Libraries
 
 %description lib
 lib components for the perl-Sub-Identify package.
+
+
+%package man
+Summary: man components for the perl-Sub-Identify package.
+Group: Default
+
+%description man
+man components for the perl-Sub-Identify package.
 
 
 %prep
@@ -45,7 +45,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 else
 %{__perl} Build.PL
 ./Build
@@ -74,10 +74,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Sub/Identify.pm
 
-%files doc
-%defattr(-,root,root,-)
-%doc /usr/share/man/man3/*
-
 %files lib
 %defattr(-,root,root,-)
 /usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/auto/Sub/Identify/Identify.so
+
+%files man
+%defattr(-,root,root,-)
+/usr/share/man/man3/Sub::Identify.3
