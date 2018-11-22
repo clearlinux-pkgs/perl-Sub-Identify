@@ -4,7 +4,7 @@
 #
 Name     : perl-Sub-Identify
 Version  : 0.14
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
 Summary  : 'Retrieve names of code references'
@@ -74,7 +74,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Sub/Identify.pm
+/usr/lib/perl5/vendor_perl/5.28.0/x86_64-linux-thread-multi/Sub/Identify.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -82,4 +82,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/auto/Sub/Identify/Identify.so
+/usr/lib/perl5/vendor_perl/5.28.0/x86_64-linux-thread-multi/auto/Sub/Identify/Identify.so
